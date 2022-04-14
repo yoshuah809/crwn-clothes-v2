@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+API_KEY
+.API_KEY
+# API_KEY
+/src/utils/firebase/API_KEY.js
+
+# secret
+/secret
+secret
