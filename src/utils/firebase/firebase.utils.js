@@ -9,7 +9,7 @@ import { API_KEY } from "./API_KEY";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: API_KEY,
+  apiKey: "AIzaSyDSG1JH9XLumntwSCJFzD6WpTVbZpq2sX0",
   authDomain: "crwn-clothingstoresdb.firebaseapp.com",
   projectId: "crwn-clothingstoresdb",
   storageBucket: "crwn-clothingstoresdb.appspot.com",
@@ -22,7 +22,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({
-  propt: "select_account"
+  prompt: "select_account"
 });
 
 export const auth = getAuth();
