@@ -1,6 +1,6 @@
 import { updateCurrentUser } from "firebase/auth";
 import { createContext } from "react";
-import { useState } from "react/cjs/react.production.min";
+import { useState } from "react";
 
 export const UserContext = createContext({
 	currentUser: null,
