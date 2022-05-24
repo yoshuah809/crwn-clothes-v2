@@ -23,6 +23,7 @@ export const Checkout = () => {
 				<div className="header-block">
 					<span>Price</span>
 				</div>
+				fire
 				<div className="header-block">
 					<span>Remove</span>
 				</div>
