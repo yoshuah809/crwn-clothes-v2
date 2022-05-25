@@ -18,6 +18,8 @@ import {
 	setDoc,
 	collection,
 	writeBatch,
+	query,
+	getDocs,
 } from "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -60,6 +62,20 @@ export const addCollectionAndDocuments = async (
 
 	await batch.commit();
 	console.log("Done!");
+};
+
+export const getCategoriesAndDocuments = async () => {
+	const collectionRef = collection(db, "categories");
+	const q = query(collectionRef);
+
+	const querySnapShot = await getDocs(q);
+	const catregoryMap = querySnapShot.docs.reduce((acc, docSnapShot) => {
+		const { title, items } = docSnapShot.data();
+		acc[title.toLowerCase()] = items;
+		return acc;
+	}, {});
+
+	return catregoryMap;
 };
 
 export const createUserDocumentFromAuth = async (
