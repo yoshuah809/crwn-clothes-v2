@@ -3,7 +3,7 @@ import { CategoryPreview } from "../../components/category-preview/category-prev
 import { ProductCard } from "../../components/product-card/product-card.component";
 import { CategoriesContext } from "../../contexts/categories.context";
 
-import "./categories-preview.styles.scss";
+import "./categories-preview.styles.jsx";
 
 export const CategoriesPreview = () => {
 	const { categoriesMap } = useContext(CategoriesContext);

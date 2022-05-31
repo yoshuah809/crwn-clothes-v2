@@ -37,6 +37,7 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
+
 googleProvider.setCustomParameters({
 	prompt: "select_account",
 });
@@ -72,6 +73,7 @@ export const getCategoriesAndDocuments = async () => {
 	const q = query(collectionRef);
 
 	const querySnapShot = await getDocs(q);
+
 	const catregoryMap = querySnapShot.docs.reduce((acc, docSnapShot) => {
 		const { title, items } = docSnapShot.data();
 		acc[title.toLowerCase()] = items;
