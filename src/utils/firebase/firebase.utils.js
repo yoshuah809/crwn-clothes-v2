@@ -9,7 +9,7 @@ import {
 	signOut,
 	onAuthStateChanged,
 } from "firebase/auth";
-import { API_KEY } from "./API_KEY";
+//import { API_KEY } from "./API_KEY";
 
 import {
 	getFirestore,
@@ -21,6 +21,7 @@ import {
 	query,
 	getDocs,
 } from "firebase/firestore";
+const API_KEY = "AIzaSyDSG1JH9XLumntwSCJFzD6WpTVbZpq2sX0";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
