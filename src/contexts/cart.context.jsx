@@ -9,6 +9,7 @@ export const CartContext = createContext({
 	clearItemFromCart: () => {},
 	cartCount: 0,
 	cartTotal: 0,
+	hidden: true,
 });
 
 const addCartItem = (cartItems, productToAdd) => {
@@ -59,6 +60,7 @@ export const CartProvider = ({ children }) => {
 	const [cartCount, setCartCount] = useState(0);
 	const [cartTotal, setCartTotal] = useState(0);
 
+	const [hidden, setHidden] = useState(false);
 	const [cartItems, setCartItems] = useState([]);
 
 	useEffect(() => {
@@ -76,6 +78,10 @@ export const CartProvider = ({ children }) => {
 		);
 		setCartTotal(newCartTotal);
 	}, [cartItems]);
+
+	const togleHiddenCart = () => {
+		setHidden(!hidden);
+	};
 
 	const addItemtoCart = (productToAdd) => {
 		setCartItems(addCartItem(cartItems, productToAdd));
@@ -97,6 +103,8 @@ export const CartProvider = ({ children }) => {
 		removeItemFromCart,
 		clearItemFromCart,
 		cartTotal,
+		togleHiddenCart,
+		hidden,
 	};
 
 	return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

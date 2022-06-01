@@ -11,11 +11,20 @@
 		padding: 10px 0;
 		display: flex;
 		justify-content: space-between;
+		margin-right: 25px;
+
 		border-bottom: 1px solid darkgrey;
+
+		@media screen and (max-width: 800px) {
+			flex-direction: row;
+			width: 50%;
+
+			margin-right: 145px;
+		}
 
 		.header-block {
 			text-transform: capitalize;
-			width: 23%;
+			width: 50%;
 
 			&:last-child {
 				width: 8%;
@@ -27,5 +36,10 @@
 		margin-top: 30px;
 		margin-left: auto;
 		font-size: 36px;
+	}
+	@media screen and (max-width: 800px) {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
 	}
 }
