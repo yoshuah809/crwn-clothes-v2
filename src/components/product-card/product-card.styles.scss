@@ -5,6 +5,9 @@
 	height: 350px;
 	align-items: center;
 	position: relative;
+	column-gap: 10px;
+	row-gap: 50px;
+	padding: 0 10px;
 
 	img {
 		width: 100%;
@@ -14,7 +17,7 @@
 	}
 
 	button {
-		width: 80%;
+		width: 60%;
 		opacity: 0.7;
 		position: absolute;
 		top: 255px;
